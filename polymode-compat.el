@@ -279,7 +279,7 @@ are passed to ORIG-FUN."
                  (when (< beg1 end1) ; don't accumulate on last line
                    (push (make-string (- end1 beg1) ? ) line-acc))
                (while (< (point-at-eol) end1)
-                 (push "\n" acc)
+                 (push "#\n" acc)
                  (forward-line 1))
                (setq line-acc (list (make-string (- end1 (point)) ? )))))))
        beg end-eol)
